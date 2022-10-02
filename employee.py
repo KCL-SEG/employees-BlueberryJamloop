@@ -11,22 +11,22 @@ class Employee:
         self.contracts_done = contracts_done
 
     def get_hourly_pay(self):
-        hourly_pay = hours_worked * salary
-        if commission != False:
-            if commision == "Bonus":
-                hourly_pay += commission_amount
+        self.hourly_pay = self.hours_worked * self.salary
+        if self.commission != False:
+            if self.commision == "Bonus":
+                self.hourly_pay += self.commission_amount
             else:
-                hourly_pay += commission_amount * contracts_done
-        return hourly_pay
+                self.hourly_pay += self.commission_amount * self.contracts_done
+        return self.hourly_pay
 
     def get_monthly_pay(self):
-        monthly_pay = salary
-        if commission != False:
-            if commision == "Bonus":
-                monthly_pay += commission_amount
+        self.monthly_pay = self.salary
+        if self.commission != False:
+            if self.commision == "Bonus":
+                self.monthly_pay += self.commission_amount
             else:
-                monthly_pay += commission_amount * contracts_done
-        return monthly_pay
+                self.monthly_pay += self.commission_amount * self.contracts_done
+        return self.monthly_pay
         
 
     def __str__(self):
